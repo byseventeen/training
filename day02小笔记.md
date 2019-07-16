@@ -44,42 +44,16 @@ function getMonthDays(year,month){
 ```
 
 ```javascript
-var d= new Date();
+        function format(date){
+            var year=date.getFullYear();
+            var month=date.getMonth();
+            var day=date.getDate();
+            return "<br>"+ year + "年" + (month+1) + "月" + day +"日<br>";
+        }
 
-
-function formatDate(date){
-    var yy=d.getFullYear();
-	var mm=d.getMonth()+1;
-	var dd=d.getDate(); 
-    return yy+"年"+mm+"月"+dd+"日";
-}
-
-
-```
-
-```javascript
- //日期格式化方法  
- //在原型上挂对象
-    Date.prototype.Format = function(fmt) {
-      var o = {
-        "M+": this.getMonth() + 1, //月份
-        "d+": this.getDate() //日
-      };
-      if (/(y+)/.test(fmt))
-        fmt = fmt.replace(
-          RegExp.$1,
-          (this.getFullYear() + "").substr(4 - RegExp.$1.length)
-        );
-      for (var k in o)
-        if (new RegExp("(" + k + ")").test(fmt))
-          fmt = fmt.replace(
-            RegExp.$1,
-            RegExp.$1.length == 1
-              ? o[k]
-              : ("00" + o[k]).substr(("" + o[k]).length)
-          );
-      return fmt;
-    };
+        var date=new Date();
+        date.setDate(14);
+        document.write(format(date));
 
 ```
 
@@ -108,9 +82,22 @@ function formatDate(date){
             RegExp.$1.length == 1
               ? o[k]
               : ("00" + o[k]).substr(("" + o[k]).length)
-          );
-      return fmt;
+          );     return fmt;
     };
 
+```
+
+ 
+
+```javascript
+        //dayOfWeek返回指定日期是星期几
+         function dayOfWeek(){
+            var weekDay = new Array
+                ("星期日","星期一","星期二","星期三","星期四","星期五","星期六");
+                return weekDay[date.getDay()];
+         }
+
+         var date=new Date();
+         document.write(dayOfWeek(date));
 ```
 
