@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			/*
+				3.自定义日期对象，然后提供以下函数。
+				formatDate(date)：将一个Date对象转换成指定格式的字符串（例如：2019年07月15日）。
+				dayOfWeek()：返回指定日期是星期几。
+			*/
+			function DateUtil() {}
+			
+			// 添加对象方法
+			DateUtil.prototype.formatDate = function(date) {
+				// this代表该方法的调用者对象
+				var year = date.getFullYear();
+				var month = date.getMonth() + 1;
+				var dd = date.getDate();
+				var hour = date.getHours();
+				var min = date.getMinutes();
+				var second = date.getSeconds();
+				
+				var dateStr = year + "年" + month + "月" + dd + "日 " + hour + "时" + min + "分" + second + "秒";
+	
+				return dateStr;
+			}
+			
+			
+			DateUtil.prototype.dayOfWeek = function (d) {
+				// 获取指定date是星期几（0-6）
+				var day = d.getDay();
+				switch (day) {
+					case 0 :
+						document.write("星期日");
+						break;
+					case 1 :
+						document.write("星期一");
+						break;
+					case 2 :
+						document.write("星期二");
+						break;
+					case 3 :
+						document.write("星期三");
+						break;
+					case 4 :
+						document.write("星期四");
+						break;
+					case 5 :
+						document.write("星期五");
+						break;
+					case 6 :
+						document.write("星期六");
+						break;
+					default:
+						
+				}
+			}
+			
+			// 创建对象
+			var dateUtil = new DateUtil();
+			var d = new Date();
+			// 调用对象方法
+//			var dateStr = dateUtil.formatDate(d);
+//			document.write(dateStr);
+			
+			dateUtil.dayOfWeek(d);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

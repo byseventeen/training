@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			// 定义了一个数组
+			var arr = new Array("java", "android", "go", "python", "spring");
+			document.write("数组的长度：" + arr.length + "<br/>");
+			
+			// 翻转数组
+			//arr.reverse();
+			//document.write(arr);
+			
+			
+			
+			// 删除元素
+			document.write("删除最后一个元素：" + arr.pop() + "<br/>");
+			document.write("删除第一个元素：" + arr.shift() + "<br/>");
+			
+			document.write("添加元素后数组的长度：" + arr.push("php") + "<br/>");
+			
+			// 把数组转换成字符串
+			var str = arr.join(" ");
+			document.write(str + "<br/>");
+			
+//			var arr2 = new Array("c", "a", "z", "h", "f", "b");
+			var arr2 = new Array(20, 10, 4, 11, 8);
+//			arr2.sort();
+			// 可以在sort函数中传入一个function
+			// 如果函数返回0，代表a等于b
+			// 如果函数返回值小于0，代表a小于b
+			// 如果函数返回值大于0，代表a大于b
+			arr2.sort(function(a, b) {
+				//return a - b;
+				return b - a;
+			});
+			document.write(arr2 + "<br/>");
+			
+			var arr3 = new Array(10, 20, 30, 40, 99);
+			// splice(start, length, newElement, ...)
+			// 删除start位置开始的length个元素，然后插入新的元素
+			arr3.splice(1, 2, 999, 555, 666);
+			document.write(arr3 + "<br/>");
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

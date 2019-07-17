@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+		
+			// 如果该方法返回false就不提交表单，返回true就提交。
+			function check() {
+				// TODO 表单验证
+				
+				
+				return true;
+			}
+			
+		</script>
+	</head>
+	<body>
+		<form action="http://www.baidu.com" method="post" onsubmit="return check()">
+			用户名: <input type="text" name="userName" value=""/><br/>
+			密码: <input type="password" name="userPass" /><br />
+			性别: <input type="radio" name="gender" value="male"/>男
+				<input type="radio" name="gender" value="female"/>女<br /> 
+			兴趣爱好: <input type="checkbox" name="favors" value="eat"/>吃
+				<input type="checkbox" name="favors" value="drink"/>喝
+				<input type="checkbox" name="favors" value="happy"/>玩<br/>
+			上传大头照: <input type="file" /><br/>
+			所在地: <select name="province">
+				<option>广东省</option>
+				<option>广西省</option>
+				<option>海南省</option>
+			</select>
+			<select name="city">
+				<option>广州市</option>
+				<option>深圳市</option>
+				<option>韶关市</option>
+			</select><br/>
+			自我介绍: <textarea name="introduce" rows=5 cols=30></textarea>
+			<input type="submit" value="保存"/>
+			<input type="reset" value="重置"/>
+		</form>
+	</body>
+</html>

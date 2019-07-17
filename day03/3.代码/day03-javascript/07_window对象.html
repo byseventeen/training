@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/date.js" ></script>
+		<script>
+			//window.open(URL,name,features,replace)
+			//window.open("http://www.baidu.com", "测试", "width=500,height=300,left=100,top=50,scrollbars=no");
+			
+			function delUser() {
+				var b = window.confirm("确认要删除吗？");
+				if (b) {
+					alert("删除用户....");
+				}
+			}
+			
+			// 显示系统时间在页面
+			function showTime() {
+				var d = new Date();
+				d = d.formatDate();
+				
+				// 把时间显示在aa标签。
+				document.getElementById("aa").innerHTML = d;
+			}
+			
+			var taskId;
+			
+			// 启动定时器
+			function start() {
+				// 每隔1s调用showTime函数一次
+				taskId = window.setInterval("showTime()", 1000);
+			}
+			
+			// 关闭定时器
+			function stop() {
+				window.clearInterval(taskId);
+			}
+		</script>
+	</head>
+	<body>
+		<button onclick="window.close();">关闭窗口</button>
+		<button onclick="delUser()">删除用户</button>
+		
+		<button onclick="start()">启动定时器</button>
+		<button onclick="stop()">关闭定时器</button>
+		
+		<!-- 块标签 
+			每一个标签都有id属性，一个html页面id属性不能够重复。
+		-->
+		<div id="aa"></div>
+		
+		<script>
+			//showTime();
+		</script>
+	</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			var person = {
+				name : 'jacky',
+				age : 18,
+				
+				work : function() {
+					alert("上班");
+				}
+			}
+			
+			// for-in遍历对象
+			for (propertyName in person) {
+//				document.write(propertyName + "<br/>");
+				document.write(person[propertyName] + "<br/>");
+			}
+			
+			// 定义匿名函数
+			(function(name) {
+				//alert(name);
+			})('jacky');
+			
+			// 使用Function对象创建函数
+			var student = new Function("name", "var aa = 10;alert(aa);");
+			student("mickey");
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

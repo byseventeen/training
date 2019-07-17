@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function getUrl() {
+				alert(location.href);
+			}
+			
+			function setUrl(url) {
+				location.href = url;
+			}
+		</script>
+	</head>
+	<body>
+		<button onclick="getUrl()">获取地址栏地址</button>
+		<button onclick="setUrl('http://baidu.com')">设置地址栏地址</button>
+	</body>
+</html>

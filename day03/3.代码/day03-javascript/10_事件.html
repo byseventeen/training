@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function selectCity() {
+				alert('加载城市');
+			}
+			
+			function init() {
+				alert("页面加载完成...");
+			}
+		</script>
+	</head>
+	<body onload="init()">
+		<!--<a href="http://baidu.com" onclick="alert('点我了');">文本</a>-->
+		<div onclick="alert('点击');">文本</div>
+		<!--<input onfocus="alert('点我');"/>-->
+		
+		<input onblur="alert('失去焦点');"/>
+		
+		<select onchange="selectCity()">
+			<option>广东省</option>
+			<option>海南省</option>
+		</select>
+		<select>
+			<option>广州</option>
+			<option>韶关</option>
+		</select>
+		
+		<div id="test">测试</div>
+		
+		<script>
+			document.getElementById("test").onclick = function() {
+				alert("点击");
+			}
+		</script>
+	</body>
+</html>
