@@ -1,10 +1,24 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8" />
-		<title></title>
-	</head>
-	<body>
-		
-	</body>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+        window.onload = function(){
+            var i = 10;
+            var timer = setInterval(function(){
+                if(i== -1){
+                    clearInterval(timer);
+                }else{
+                    document.body.innerHTML = i;
+                    --i;
+                }
+            },1000);
+ 
+        }
+    </script>
+</head>
+<body>
+ 
+</body>
 </html>

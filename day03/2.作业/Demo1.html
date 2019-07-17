@@ -5,7 +5,7 @@
 		<title>作业</title>
 		<script src="js/demo1.js"></script>
 	</head>
-	<body>
+	<body onload="start()">
 		<div class="one">
 			<label>书名：</label>
 			<input type="text" id="bookname"/><br />
@@ -21,6 +21,14 @@
 		<div class="two">
 			<a href="demo011.html">操作</a>
 		</div>
+
+		<div class="three">
+			<button onclick="setRandom(100000,999999)">生成随机数</button>
+			<span id="num"></span>
+			<button onclick="stop()">停止</button>
+		</div>
+
+
 		
 
 	</body>
