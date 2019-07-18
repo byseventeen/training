@@ -3,10 +3,27 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>day04作业</title>
+
 	</head>
 	<body>
-		用户名：<input type="text" id="username" /><br />
-		密     码：<input type="password" id="password" /><br />
-		<input type="submit" value="确定"/>
+        <div class="one1" id="one">
+           <input type="checkbox" id="check1" onclick="setText1()"> 展示隐藏内容
+        </div>
+
+        <div class="one2">
+            <input type="checkbox" id="check2" onclick="setText2(this)"> 展示隐藏内容
+            <div id="aa" style="display: none;"><p>display方法</p></div>
+        </div>
+
+        <div class="two" id="two">
+            <ul  id="twoul">
+                <li>宫保鸡丁</li>
+                <li>辣子鸡</li>
+                <li>水煮牛肉</li>
+            </ul>
+            <input type="text" id="tt">
+            <input type="submit" value="动态生成列表项" onclick="insert()">
+        </div>
+        <script type="text/javascript" src="js/demo1.js"></script>
 	</body>
 </html>
