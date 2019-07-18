@@ -66,7 +66,33 @@
                     <td>手机数码商品</td>
                     <td>a 修改删除</td>
                 </tr>              
-</table>
+            </table>
+        </div>
+
+        <div class="four">
+            <form  method="post" onsubmit="return check()">
+                用户名: <input type="text"  value=""  id="userName"/> <br/>
+                <span id="userNameMsg"></span><br/>
+                密码: <input type="password" id="pwd"/><br />
+                <span id="pwdMsg"></span><br/>
+                确认密码：<input type="password" id="pwdd" /><br />
+                <span id="pwddMsg"></span><br/>
+                用户类型: <input type="radio" value="vip" id="vip"/>vip用户
+                    <input type="radio" value="normal" id="normal"/>普通用户<br /> 
+                    <span id="typeMsg"></span><br/>
+                所在地: <select onchange="selectCity(this)" id="province">
+                    <option>请选择省份</option>
+                    <option>广东省</option>
+                    <option>湖南省</option>
+                    <option>海南省</option>
+                </select>
+                <select id="city">
+                    <option>请选择城市</option>
+                </select><br/>
+                <span id="cityMsg"></span><br/>
+                <input type="submit" value="提交注册"/>
+                <input type="reset" value="重置"/>
+            </form>
         </div>
         <script type="text/javascript" src="js/demo1.js"></script>
 	</body>
