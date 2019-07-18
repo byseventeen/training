@@ -32,16 +32,28 @@ function insert(){
    document.getElementById("tt").value="";
 }
 
+var checked=document.getElementsByClassName("checkbox");
 function checkall() {
-    
+    for (var i = 0; i < checked.length; i++){
+        checked[i].checked=true;
+    }
 }
 
 function nocheck() {
-    // body...
+    for (var i = 0; i < checked.length; i++){
+        checked[i].checked=false;
+    }
 }
 
 function backcheck() {
-    // body...
+    for (var i = 0; i < checked.length; i++){
+        if (checked[i].checked==true) {
+            checked[i].checked=false;
+        }
+        else{
+            checked[i].checked=true;
+        }
+    }
 }
 
 
