@@ -71,15 +71,19 @@
 
         <div class="four">
             <form  method="post" onsubmit="return check()">
-                用户名: <input type="text"  value=""  id="userName"/> <br/>
+                用户名: <input type="text"  value="" id="userName" onblur="checkUserName()"/> <br/>
                 <span id="userNameMsg"></span><br/>
-                密码: <input type="password" id="pwd"/><br />
+
+                密码: <input type="password" id="pwd" onblur="checkPassWord()"/><br />
                 <span id="pwdMsg"></span><br/>
-                确认密码：<input type="password" id="pwdd" /><br />
+
+                确认密码：<input type="password" id="pwdd" onblur="checkRePassWord()"/><br />
                 <span id="pwddMsg"></span><br/>
-                用户类型: <input type="radio" value="vip" id="vip"/>vip用户
-                    <input type="radio" value="normal" id="normal"/>普通用户<br /> 
+
+                用户类型: <input type="radio" value="vip" id="vip" onblur="checkRadio()"/>vip用户
+                    <input type="radio" value="normal" id="normal" onblur="checkRadio()"/>普通用户<br /> 
                     <span id="typeMsg"></span><br/>
+
                 所在地: <select onchange="selectCity(this)" id="province">
                     <option>请选择省份</option>
                     <option>广东省</option>
@@ -90,8 +94,9 @@
                     <option>请选择城市</option>
                 </select><br/>
                 <span id="cityMsg"></span><br/>
-                <input type="submit" value="提交注册"/>
-                <input type="reset" value="重置"/>
+
+                <input type="submit" value="提交注册" onclick="check()" />
+                <input type="reset" value="重置" onclick="clickReset()" />
             </form>
         </div>
         <script type="text/javascript" src="js/demo1.js"></script>
