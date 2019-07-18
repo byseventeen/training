@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			var second = 5;
+			var taskId;
+			
+			function count() {
+				second--;
+				document.getElementById("second").textContent = second;
+				if (second == 0) {
+					clearInterval(taskId);
+					location.href = "http://www.baidu.com";
+				}
+			}
+		
+			taskId = setInterval("count()", 1000);
+		</script>
+	</head>
+	<body>
+		操作成功！<span id="second">5</span>秒后返回操作界面！
+	</body>
+</html>

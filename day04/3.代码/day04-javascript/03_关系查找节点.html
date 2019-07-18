@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h3>用户注册</h3>
+		<form>
+			<input id="userName"/>
+			<input type="submit"/>
+		</form>
+		<script>
+			// ------------- 父子关系查找节点 ---------------
+			/*var userNameNode = document.getElementById("userName");
+			// 获取父节点
+			var formNode = userNameNode.parentNode;
+			//document.write(formNode.nodeName + "<br/>");
+			
+			//var bodyNode = document.getElementsByTagName("body")[0];
+			var bodyNode = document.body;
+			// 获取第一个子节点
+			var formNode = bodyNode.firstChild;
+			document.write(formNode.nodeName + "<br/>");
+			// 获取最后一个子节点
+			var scriptNode = bodyNode.lastChild;
+			document.write(scriptNode.nodeName + "<br/>");*/
+			
+			// ------------- 兄弟关系查找节点 ---------------
+			var formNode = document.getElementsByTagName("form")[0];
+			// 获取上一级的兄弟节点
+			var h3Node = formNode.previousSibling.previousSibling;
+			document.write(h3Node.nodeName + "<br/>");
+			
+			var scriptNode = formNode.nextSibling.nextSibling;
+			document.write(scriptNode.nodeName + "<br/>");
+			
+			
+			
+			
+			
+		</script></body>
+</html>

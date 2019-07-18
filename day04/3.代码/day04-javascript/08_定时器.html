@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>计时器</title>
+		<script>
+			var taskId;
+			var second = 0;
+			var min = 0;
+			var hour = 0;
+			
+			function start() {
+				if (taskId == null) {
+					taskId = setInterval("start()", 5);	
+				}
+				
+				second++;
+				if (second == 60) {
+					min++;
+					second = 0;
+				}
+				if (min == 60) {
+					hour++;
+					min = 0;
+				}
+				
+				if (hour < 10) {
+					document.getElementById("hh").textContent = "0" + hour;	
+				} else {
+					document.getElementById("hh").textContent = hour;	
+				}
+				if (min < 10) {
+					document.getElementById("mm").textContent = "0" + min;	
+				} else {
+					document.getElementById("mm").textContent = min;
+				}
+				if (second < 10) {
+					document.getElementById("ss").textContent = "0" + second;	
+				} else {
+					document.getElementById("ss").textContent = second;
+				}
+				
+				
+			}
+			
+			function stop() {
+				clearInterval(taskId);
+				taskId = null;
+			}
+			
+			function cancel() {
+				stop();
+				second = 0;
+				min = 0;
+				hour = 0;
+				document.getElementById("hh").textContent = "00";
+				document.getElementById("mm").textContent = "00";
+				document.getElementById("ss").textContent = "00";
+			}
+		</script>
+	</head>
+	<body>
+		<span id="hh">00</span>:
+		<span id="mm">00</span>:
+		<span id="ss">00</span>
+		<button onclick="start()">启动</button>
+		<button onclick="stop()">暂停</button>
+		<button onclick="cancel()">归零</button>
+	</body>
+</html>

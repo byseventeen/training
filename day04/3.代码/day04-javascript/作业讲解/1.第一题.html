@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function calc() {
+				// 获取用户输入的内容
+				var bookName = document.getElementById("bookName").value;
+				var author = document.getElementById("author").value;
+				var price = document.getElementById("price").value;
+				var discount = document.getElementById("discount").value;
+				// 计算折后价格
+				price = price * discount;
+				alert("这本书名为《" + bookName + "》" + author + "编著的书，折扣是" + discount + "，折后价格为" + price);
+				
+			}
+		</script>
+	</head>
+	<body>
+		书名：<input type="text" id="bookName"/><br/>
+		作者：<input type="text" id="author"/><br/>
+		价格：<input type="text" id="price"/><br/>
+		折扣：<input type="text" id="discount"/><br/>
+		<input type="button" value="计算折扣价"
+			onclick="calc()"/>
+	</body>
+</html>

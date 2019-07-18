@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var data = "请联系我13232345232请联系我13232345243请联系我132323245232请联系我13232341232请联系我12323234523请联系我15932345232";
+			// 定义规则
+			var regex = /1\d{10}/g;
+			// 根据正则表达式查找指定字符串的内容
+			var phone = regex.exec(data)
+			while (phone != null) {
+				alert(phone);
+				phone = regex.exec(data)
+			}
+		</script>
+	</body>
+</html>

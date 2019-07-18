@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function delRow(aNode) {
+				// 获取a标签所在行的tr元素
+				var trNode = aNode.parentNode.parentNode;	
+				// 获取tbody元素
+				var tbodyNode = document.getElementsByTagName("tbody")[0];
+				// 删除tr元素
+				tbodyNode.removeChild(trNode);
+			}
+		
+			function add() {
+				// 获取输入的用户信息
+				var num = document.getElementById("num").value;
+				var name = document.getElementById("name").value;
+				var age = document.getElementById("age").value;
+				
+				// 生成一行
+				var trNode = document.createElement("tr");
+				// 生成列
+				var tdNode1 = document.createElement("td");
+				tdNode1.textContent = num;
+				var tdNode2 = document.createElement("td");
+				tdNode2.textContent = name;
+				var tdNode3 = document.createElement("td");
+				tdNode3.textContent = age;
+				var tdNode4 = document.createElement("td");
+				tdNode4.innerHTML = "<a href=\"#\" onclick=\"delRow(this)\">删除</a>";
+				
+				// 把所有列添加trNode
+				trNode.appendChild(tdNode1);
+				trNode.appendChild(tdNode2);
+				trNode.appendChild(tdNode3);
+				trNode.appendChild(tdNode4);
+				
+				// 把trNode添加tbody节点中
+				var tbodyNode = document.getElementsByTagName("tbody")[0];
+				tbodyNode.appendChild(trNode);
+			}
+		</script>
+	</head>
+	<body>
+		<!-- 定义一个表格 -->
+		<table border="1" cellspacing="0" width="500">
+			<!-- 定义行 -->
+			<tr>
+				<!-- 定义标题列 -->
+				<th>编号</th>
+				<th>姓名</th>
+				<th>年龄</th>
+				<th>操作</th>
+			</tr>
+			<tr>
+				<!-- 定义普通列 -->
+				<td>110</td>
+				<td>jacky</td>
+				<td>18</td>
+				<td>
+					<a href="#" onclick="delRow(this)">删除</a>
+				</td>
+			</tr>
+			<tr>
+				<td>220</td>
+				<td>joe</td>
+				<td>20</td>
+				<td>
+					<a href="#" onclick="delRow(this)">删除</a>
+				</td>
+			</tr>
+		</table>
+		<input id="num" />
+		<input id="name" />
+		<input id="age" />
+		<a href="#" onclick="add()">添加</a>
+	</body>
+</html>

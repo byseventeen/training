@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<ul><li>宫保鸡丁</li>
+			<li>海南鸡</li>
+			<li>东波肉</li></ul>
+		<script>
+			// 获取ul节点
+			var ulNode = document.getElementsByTagName("ul")[0];
+			// 获取最后一个li节点
+			var lastLiNode = ulNode.lastChild;
+			// 构建新的li
+			var newLiNode = document.createElement("li");
+			newLiNode.textContent = "口水鸡";
+			// 在最后li节点前插入新节点
+			ulNode.insertBefore(newLiNode, lastLiNode);
+		</script>
+	</body>
+</html>

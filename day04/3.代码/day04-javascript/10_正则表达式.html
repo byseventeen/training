@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			/*
+				手机号码规则：
+				1）长度是11位；
+				2）必须是数字；
+				3）1开头；
+			*/
+			var phone = "1333232333";
+			/*var isValidPhone = true;
+			if (phone.length != 11) {
+				isValidPhone = false;
+				alert("非法手机号码");
+			} else {
+				// 获取字符串的第一个字符
+				var c = phone.charAt(0);
+				if (c != "1") {
+					isValidPhone = false;
+					alert("非法手机号码");
+				} else {
+					// 是否是数字
+					var phoneNum = parseInt(phone);
+					if (phoneNum == NaN || phoneNum.toString().length < 11) {
+						isValidPhone = false;
+						alert("非法手机号码");
+					}
+					
+					if (isValidPhone) {
+						alert("有效的手机号码");
+					}
+				}
+			}*/
+			
+			// 定义规则
+			//var phoneRegx = /1\d{10}/;
+			var phoneRegx = new RegExp("1\\d{10}");
+			// 手机号码匹配正则，就返回true，否则返回false。
+			var b = phoneRegx.test(phone);
+			alert(b ? "有效的手机号码" : "无效手机号码");
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

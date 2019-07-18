@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function checkUserName() {
+				// 获取用户输入
+				var userName = document.getElementById("userName").value;
+				// 验证用户输入（非空、长度不能小于5位、必须是英文或数字组成）
+				var regex = /[a-z0-9]{5,}/i;
+				// 匹配
+				var isValid = regex.test(userName);
+				if (!isValid) {
+					document.getElementById("userNameMsg").textContent = "X 用户名格式不正确";
+				} else {
+					document.getElementById("userNameMsg").textContent = "√";
+				}
+			}
+			
+			
+			checkUserName();
+		</script>
+	</head>
+	<body>
+		<input type="text" id="userName" onblur="checkUserName()"/>
+		<span id="userNameMsg"></span>
+	</body>
+</html>
