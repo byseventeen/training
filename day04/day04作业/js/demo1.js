@@ -30,8 +30,18 @@ function insert(){
    li_1.textContent = tt;  
    parent.appendChild( li_1);
    document.getElementById("tt").value="";
-
 }
 
+function checkall() {
+    
+}
+
+function nocheck() {
+    // body...
+}
+
+function backcheck() {
+    // body...
+}
 
 
