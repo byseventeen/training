@@ -37,6 +37,11 @@
 - day04作业         晚修完成
 - 查一下各类的正则表达式 并且写进笔记
 
+
+
+- java 正则表达式
+- jQuery的一些用法
+
 #### Future
 
 #### Delay
@@ -64,14 +69,15 @@
 
 ##### shopping list
 
-- 卸妆水
 - 小零食（下午的时候会饿）
+- 格子外套
 
 ##### Reading list
 
 ##### Place to go
 
 - muji
+- 国誉
 
 
 
