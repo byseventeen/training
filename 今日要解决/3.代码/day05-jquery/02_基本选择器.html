@@ -22,17 +22,17 @@
 					alert(i);
 					// this是dom对象
 					alert(this.value);
-				});
+				});*/
 				
 				// 组合选择器
 				//alert($("input, button").size());
-				$("input, button").each(function(i) {
+				/*$("input, button").each(function(i) {
 					alert(this.nodeName);
 				});*/
 				
 				// 关系选择器
-//				$("#course div").each(function(i) {
-				$("#course>div").each(function(i) {
+				$("#course div").each(function(i) {
+//				$("#course>div").each(function(i) {
 					alert(this.textContent);
 				});
 			});
