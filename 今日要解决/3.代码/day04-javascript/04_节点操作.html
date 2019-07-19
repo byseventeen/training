@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<img src="img/good.jpg" width="150" height="80"/>
+		<!-- 列表标签 -->
+		<!--<ul>
+			<li>java</li>
+			<li>php</li>
+			<li>android</li>
+		</ul>-->
+		<script>
+			// 创建url元素
+			var ulElement = document.createElement("ul");
+			// 创建li元素
+			var li_1 = document.createElement("li");
+			// 设置元素的文本内容
+			li_1.textContent = "java";
+			var li_2 = document.createElement("li");
+			li_2.textContent = "php";
+			var li_3 = document.createElement("li");
+			li_3.textContent = "android";
+			// 把li添加ul中
+			ulElement.appendChild(li_1);
+			ulElement.appendChild(li_2);
+			ulElement.appendChild(li_3);
+			// 把ul添加body中
+			document.body.appendChild(ulElement);
+		</script>
+	</body>
+</html>

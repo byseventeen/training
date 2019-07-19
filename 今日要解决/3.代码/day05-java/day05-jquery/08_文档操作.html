@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-3.3.1.min.js" ></script>
+		<script type="text/javascript" src="js/jquery-migrate-1.4.1.min.js" ></script>
+		<script>
+			function addRow() {
+				//$("tbody").append("<tr><td>5</td><td>苹果电脑</td><td>数码电器</td></tr>");
+				//$("<tr><td>5</td><td>苹果电脑</td><td>数码电器</td></tr>").appendTo("tbody");
+				
+				// 往tbody里面的最前面位置添加子元素
+				//$("tbody").prepend("<tr><td>5</td><td>苹果电脑</td><td>数码电器</td></tr>");
+				
+				$("<tr><td>5</td><td>苹果电脑</td><td>数码电器</td></tr>").prependTo("tbody");
+			}
+			
+			function addImage() {
+				// 在table元素前面添加img元素
+				//$("table").before("<img src='img/good.jpg'/>");
+				//$("<img src='img/good.jpg'/>").insertBefore("table");
+				
+				// 在table元素后面添加img元素
+				//$("table").after("<img src='img/good.jpg'/>");
+				$("<img src='img/good.jpg'/>").insertAfter("table");
+				
+				
+			}
+			
+			function delRow() {
+				// 获取用户输入
+				var id = $("#rownum").val();
+				// 把所有tr遍历一遍
+				$("tbody tr").each(function(i) {
+					var idNode = $(this).find("td:first");
+					//alert(idNode.text());
+					if (id == idNode.text()) {
+						// 删除当前遍历的tr元素
+						$(this).remove();
+					}
+				});
+			}
+		</script>
+	</head>
+	<body>
+		<table border="1" cellspacing="0">
+			<thead>
+				<tr>
+					<th>分类ID</th>
+					<th>分类名称</th>
+					<th>分类描述</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>手机数码</td>
+					<td>手机数码类商品</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>电脑办公</td>
+					<td>电脑办公类商品</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>鞋靴箱包</td>
+					<td>鞋靴箱包类商品</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>家居饰品</td>
+					<td>家居饰品类商品</td>
+				</tr>
+			</tbody>
+		</table>
+		<input type="button" value="添加商品" onclick="addRow()" />
+		<input type="button" value="添加图片" onclick="addImage()" />
+		<input type="text" id="rownum" />
+		<input type="button" value="删除商品" onclick="delRow()" />
+	</body>
+</html>

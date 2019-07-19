@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" id="userName" value="jacky"/><br/>
+		<input type="password" id="userPass" value=""/><br/>
+		<input type="checkbox" name="hobby"/>吃
+		<input type="checkbox" name="hobby"/>喝
+		<input type="checkbox" name="hobby"/>玩<br/>
+		
+		<script>
+			/*// 注意：获取元素对象之前必须要保证该元素标签被加载完。
+			var userNameNode = document.getElementById("userName");
+			//alert(userNameNode);
+			document.write(userNameNode.nodeName + "<br/>");
+			document.write(userNameNode.nodeValue + "<br/>");
+			document.write(userNameNode.nodeType + "<br/>");
+			
+			// 根据标签名获取元素
+			var inputNodes = document.getElementsByTagName("input");
+			for (var i = 0; i < inputNodes.length; i++) {
+				var inputNode = inputNodes[i];
+				document.write(inputNode.nodeName + "<br/>");
+			}*/
+			
+			var hobbyNodes = document.getElementsByName("hobby");
+			for (var i = 0; i < hobbyNodes.length; i++) {
+				var inputNode = hobbyNodes[i];
+				document.write(inputNode.nodeName + "<br/>");
+			}
+		</script>
+	</body>
+</html>

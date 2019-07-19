@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-3.3.1.min.js" ></script>
+		<script type="text/javascript" src="js/jquery-migrate-1.4.1.min.js" ></script>
+		<script>
+			function setText() {
+				//$("#content").text("<h1>java1班</h1>");
+				$("#userName").val("mm");
+			}
+			
+			function getText() {
+				//alert($("#content").text());
+				alert($("#userName").val());
+			}
+		</script>
+	</head>
+	<body>
+		<span id="content">中软国际</span>
+		<input type="text" id="userName" value="mickey"/>
+		<input type="button" value="设置文本" onclick="setText()"/>
+		<input type="button" value="获取文本" onclick="getText()"/>
+	</body>
+</html>

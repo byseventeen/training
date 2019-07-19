@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-3.3.1.min.js" ></script>
+		<script type="text/javascript" src="js/jquery-migrate-1.4.1.min.js" ></script>
+		<script>
+			$(document).ready(function() {
+				// 获取第一个input元素
+				//alert($("input:first").val());
+				// 获取最后一个input元素
+				// alert($("input:last").val());
+				// 获取指定索引的input元素
+				// alert($("input:eq(1)").val());
+				// 获取有checked属性的input元素
+				// alert($("input:checked").val());
+				
+				// 获取有selected属性的元素
+				//alert($("option:selected").val());
+				
+				// 获取隐藏的元素
+				alert($("select:hidden").html());
+			});
+		</script>
+	</head>
+	<body>
+		用户名:<input type="text" id="userName" value="mickey"/><br/>
+		密码:<input type="text" id="userPass" value="123"/><br/>
+		性别:<input type="radio" name="gender" value="male"/>男
+		<input type="radio" name="gender" value="female" checked/>女<br/>
+		所选课程:<select style="display:none">
+			<option value="java">Java</option>
+			<option value="front">前端</option>
+			<option value="php" selected>PHP</option>
+		</select>
+	</body>
+</html>

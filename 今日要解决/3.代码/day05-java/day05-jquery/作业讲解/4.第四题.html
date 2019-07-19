@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			// 数组下标对应省份下拉选择框的第i个选项
+			var citys = [["请选择城市"],["广州", "深圳", "珠海"],["衡阳", "长沙", "张家界"],["琼海", "三亚", "海口"]];
+			
+			function selectCity(selectNode) {
+				var citySelectNode = document.getElementById("city");
+				// 清空城市select中的选项清空
+				citySelectNode.options.length = 1;
+				// 获取选中选项的索引
+				var index = selectNode.selectedIndex;
+				//alert(index);
+				// 根据索引获取城市
+				var cityData = citys[index]; 
+				// 遍历城市
+				for (var i = 0; i < cityData.length; i++) {
+					var city = cityData[i];
+					// 创建option元素
+					var optionNode = document.createElement("option");
+					// 设置option元素的文本内容
+					optionNode.textContent = city;
+					// 把option添加到城市select元素中
+					citySelectNode.appendChild(optionNode);
+				}
+				
+			}
+			
+			function check() {
+				var nameNode = document.getElementById("name");
+				if (nameNode.value == "") {
+					alert("用户名不能为空");
+					return false;
+				}
+				var passNode = document.getElementById("pass");
+				if (passNode.value == "") {
+					alert("密码不能为空");
+					return false;
+				}
+				var repassNode = document.getElementById("repass");
+				if (passNode.value != repassNode.value) {
+					alert("重复密码不正确");
+					return false;
+				}
+				// 判断用户类型是否有选中
+				var isChecked = false;
+				var userTypeNodes = document.getElementsByName("userType");
+				for (var i = 0; i < userTypeNodes.length; i++) {
+					if (userTypeNodes[i].checked) {
+						isChecked = true;
+						break;
+					}
+				}
+				if (!isChecked) {
+					alert("请选择用户类型");
+					return false;
+				}
+				var cityNode = document.getElementById("city");
+				if (cityNode.selectedIndex == 0) {
+					alert("请选择城市");
+					return false;
+				}
+				return true;
+			}
+		</script>
+	</head>
+	<body>
+		<form onsubmit="return check()">
+			用户名：<input id="name"/><br/>
+			密码：<input type="password" id="pass"/><br/>
+			重复密码：<input type="password" id="repass"/><br/>
+			用户类型：<input type="radio" name="userType" value="vip"/>vip
+				<input type="radio" name="userType" value="general" checked/>一般用户<br/>
+			所在城市：
+			<select onchange="selectCity(this)">
+				<option>请选择省份</option>
+				<option>广东省</option>
+				<option>湖南省</option>
+				<option>海南省</option>
+			</select>
+			<select id="city">
+				<option>请选择城市</option>
+			</select><br/>
+			<input type="submit" value="提交" />
+			<input type="reset" value="重置" />
+		</form>
+	</body>
+</html>

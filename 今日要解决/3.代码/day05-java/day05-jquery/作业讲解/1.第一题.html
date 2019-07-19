@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			/* 设置msg标签的可见状态为隐藏 */
+			#msg {
+				display: none;
+			}
+		</style>
+		<script>
+			function showText(cb) {
+				var status = cb.checked;
+				if (status) {
+					document.getElementById("msg").style.display = "block";
+				} else {
+					document.getElementById("msg").style.display = "none";
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input type="checkbox" onclick="showText(this)"/>展示隐藏内容
+		<div id="msg">~~各位老好，这是隐藏内容~~</div>
+	</body>
+</html>
