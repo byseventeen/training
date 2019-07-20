@@ -12,8 +12,22 @@
 		</div>
 		
 		<div class="two">
-			<button class="onmouseover" onmouseover="onmose()">显示隐藏内容</button>
-			<div class="hidediv">这里是被隐藏的内幕</div>
+			<button class="onmouseover" onmouseover="onmouseover1()" onmouseout="onmouseout1()" >显示隐藏内容</button>
+			<div class="hidediv" id="hidediv">这里是被隐藏的内幕</div>
+		</div>
+		
+		<div class="three">
+			用户名：<input type="text" id="username" onblur="checkname()" />
+			<span id="usernameMag"></span><br />
+			
+			密码：<input type="password" id="password" onblur="checkpwd()"/>
+			<span id="pwdMsg"></span><br />
+			
+			确认密码：<input type="password" id="repassword" onblur="checkrepwd()"/>
+			<span id="repwdMsg"></span><br />
+			手机号码： <input type="number" id="phonenum"/><br />
+			QQ号码： <input type="number" id="qqnum"/><br />
+			<input type="submit" value="确认提交" />
 		</div>
 	</body>
 </html>
