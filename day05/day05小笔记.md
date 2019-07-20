@@ -106,39 +106,79 @@ var inputNode = userNameObj.get()[0];
 
    $("selector1 > selector2")：获取selector1下所有的直接后代selector2。会把子节点兄弟节点页拿出来
 
-##### 筛选条件
+#### 筛选条件
 
 - $("selector:first")：获取第一个selector元素； 
-
 - $("selector:last")：获取最后一个selector元素； 
-
 - $("selector:eq(i)")：根据索引获取selector元素； 
-
 - $("selector:checked")：查询有 checked 属性的selector元素； 
-
 - $("selector:selected")：查询有 selected 属性的selector元素； 
-
 - $("selector:hidden"); 查询隐藏的selector元素。
 
-  
 
-  ##### 
 
-  eq(i): 根据索引获取元素 
 
-  first(): 取第一个 
+- eq(i): 根据索引获取元素 
 
-  last(): 取最后一个 
+- first(): 取第一个 
 
-  prev()：获取上一个同辈的元素； 
+- last(): 取最后一个 
 
-  next()：获取下一个同辈的原素； 
+- prev()：获取上一个同辈的元素； 
 
-  parent()：获取父元素； 
+- next()：获取下一个同辈的原素； 
 
-  children()：获取所有子元素的集合；
+- parent()：获取父元素； 
 
-  
+- children()：获取所有子元素的集合；
+
+
+
+```JavaScript
+$("username").eq(5).val();
+$("username").first().val();
+$("username").next().val();
+$("username").last().val();
+$("username").prev().get(0).nodename;
+$("username").parent().get(0).nodename;
+$(document.body).children().each(function(i){
+    alert(this.nodename)
+});
+```
+
+
+
+#### 操作属性
+
+获取元素属性
+
+设置元素属性
+
+设置多个属性
+
+```javascript
+$("div1").prop("background-color");
+$("div1").prop("color","blue");
+$("div1").prop("color":"blue","background-color":"blue")
+```
+
+
+
+prop和attr区别
+
+prop设置或者获取元素的固有属性。后者能够设置获取任何属性（可添加）。
+
+
+
+####  设置或获取文本
+
+html()：相当原生js的innerHTML属性。
+
+text()：相当原生js的textContent属性。
+
+val()：相当原生js的value属性。
+
+
 
 
 
