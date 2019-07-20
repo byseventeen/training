@@ -25,9 +25,29 @@
 			
 			确认密码：<input type="password" id="repassword" onblur="checkrepwd()"/>
 			<span id="repwdMsg"></span><br />
-			手机号码： <input type="number" id="phonenum"/><br />
-			QQ号码： <input type="number" id="qqnum"/><br />
-			<input type="submit" value="确认提交" />
+			
+			手机号码： <input type="text" id="phonenum" onblur="checkphnum()"/>
+			<span id="phoneMsg"></span><br />
+			
+			QQ号码： <input type="text" id="qqnum" onblur="checkqqnum()"/>
+			<span id="qqMsg"></span><br />
+			<input type="submit" value="确认提交" onclick="checkall()"/>
+		</div>
+		
+		<div class="four">
+				<ul id="command">
+					<li>lucy:沙发！</li>
+				</ul>
+			<br />
+			昵称：<input type="text"  id="uname" />
+			<textarea rows="10" cols="30" id="commandtxt"></textarea>
+			<input type="submit"  value="评论" onclick="getcommand()"/>
+		</div>
+		
+		<div class="five">
+			<select id="city" onclick="selectCity()">
+				<option>请选择</option>
+			</select>
 		</div>
 	</body>
 </html>

@@ -4,3 +4,7 @@
 	border: solid 1px black;
 	display: block;
 }
+
+#command{
+	list-style-type: none;
+}

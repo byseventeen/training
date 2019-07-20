@@ -61,8 +61,72 @@ function checkrepwd(){
 	}
 }
 
-function
+function checkphnum(){
+	var checkphnum=document.getElementById("password").value;
+	var regx=/^((13[0-9])|(14[5|7])|(15([0-3]|[5-9]))|(18[0,5-9]))\d{8}$/;
+	var isValid = regx.test(checkphnum);
+	if(!isValid){
+		document.getElementById("phoneMsg").innerHTML="手机号码格式错误"
+	}
+	else if(checkphnum.length==0){
+		document.getElementById("phoneMsg").innerHTML="手机号码不可为空";
+	}
+	else{
+		document.getElementById("phoneMsg").innerHTML="正确"
+	}	
+}
 
+function checkqqnum(){
+	var checkqqnum=document.getElementById("qqnum").value;
+	var regx=/^[1-9][0-9]{4,10}$/;
+	var isValid = regx.test(checkqqnum);
+	if(!isValid){
+		document.getElementById("qqMsg").innerHTML="QQ号码格式错误"
+	}
+	else if(checkqqnum.length==0){
+		document.getElementById("qqMsg").innerHTML="qq号码不可为空";
+	}
+	else{
+		document.getElementById("qqMsg").innerHTML="正确"
+	}		
+}
+
+function checkall(){
+	checkname();
+	checkpwd();
+	checkrepwd();
+	checkphnum();
+	checkqqnum();
+}
+
+function getcommand(){
+	var uname=document.getElementById("uname").value;
+	var commandtxt=document.getElementById("commandtxt").value;	
+	var ulNode = document.getElementById("command");
+	var newLiNode = document.createElement("li");
+	newLiNode.textContent=uname+":"+commandtxt;
+	var lastLiNode = ulNode.lastChild;
+	ulNode.insertBefore(newLiNode, lastLiNode);
+}
+
+// 数组下标对应省份下拉选择框的第i个选项
+var citys = ["请选择","a","b","c"];
+			
+			function selectCity() {
+				var citySelectNode = document.getElementById("city");
+
+				// 遍历城市
+				for (var i = 0; i < citys.length; i++) {
+					var city = citys[i];
+					// 创建option元素
+					var optionNode = document.createElement("option");
+					// 设置option元素的文本内容
+					optionNode.textContent = city;
+					// 把option添加到城市select元素中
+					citySelectNode.appendChild(optionNode);
+				}
+				
+			}
 
 
 
