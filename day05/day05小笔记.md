@@ -1,4 +1,4 @@
-### java正则
+###  java正则
 
 一个字符匹配一位
 
@@ -180,9 +180,38 @@ val()：相当原生js的value属性。
 
 
 
+#### 文档处理
 
+在a中添加子元素
 
+在a中最前面添加子元素（a children 第一个）
 
+在a的前面添加元素
+
+在a后面添加元素
+
+删除元素
+
+删除a中所有子元素
+
+```javascript
+
+$("<tr><td>5</td><td>苹果电脑</td><td>数码电器</td></tr>").prependTo("tbody");
+$(selector).append("html元素")
+
+$(selector).prepend("html元素")
+$("html元素").prependTo(selector)
+
+$(selector).before("html元素")
+$("html元素").insertBefore(selector)
+
+$(selector).after("html元素")
+$("html元素").insertAfter(selector)
+
+$(selector).remove("html元素")
+
+$(selector).empty("html元素")
+```
 
 
 
