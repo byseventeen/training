@@ -115,7 +115,6 @@ var citys = ["请选择","a","b","c"];
 			function selectCity() {
 				var citySelectNode = document.getElementById("city");
 				citySelectNode.options.length = 1;
-				// 遍历城市
 				for (var i = 0; i < citys.length; i++) {
 					var city = citys[i];
 					// 创建option元素
