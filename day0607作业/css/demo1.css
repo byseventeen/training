@@ -2,3 +2,33 @@
     display: none;
     margin-left: 40px;
 }
+.listul{
+    list-style: none;
+    width: 300px;
+    border:1px solid;
+    padding: 0;
+
+}
+.listli{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid;
+}
+.list-l{
+    display: flex;
+    width: 2px;
+    height: 2px;
+}
+.list-r{
+    display: flex;
+    width: 6px;
+    height: 9px;
+}
+.text{
+    display: flex;
+}
+#dlastli{
+    border-bottom: 0;
+}
