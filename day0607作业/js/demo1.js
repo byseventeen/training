@@ -1,1 +1,4 @@
-demo1.js
+$(".two").click(function() {
+        $(".one").show();
+});
+ 
