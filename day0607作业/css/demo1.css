@@ -2,19 +2,39 @@
     display: none;
     margin-left: 40px;
 }
-.listul{
+.listul1{
     list-style: none;
     width: 300px;
     border:1px solid;
     padding: 0;
-
+    margin: 0;
+}
+.listul2{
+    list-style: none;
+    width: 300px;
+    border:1px solid;
+    padding: 0;
+    margin: 0;
+    border-top: 0;
+    display: none;
 }
 .listli{
+    height: 50px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     border-bottom: 1px solid;
+}
+.up,.down{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 300px;
+}
+
+.upimg,.downimg{
+    display: flex;
 }
 .list-l{
     display: flex;
@@ -29,6 +49,9 @@
 .text{
     display: flex;
 }
-#dlastli{
+#downlast{
+    border-bottom: 0;
+}
+#uplast{
     border-bottom: 0;
 }
