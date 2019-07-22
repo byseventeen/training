@@ -2,6 +2,9 @@
     display: none;
     margin-left: 40px;
 }
+.lititle{
+	text-align: center;
+}
 .listul1{
     list-style: none;
     width: 300px;
