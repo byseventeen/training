@@ -8,26 +8,29 @@
 .listul1{
     list-style: none;
     width: 300px;
-    border:1px solid;
+    border:1px solid #b4e4d8;
     padding: 0;
     margin: 0;
+    background-color: #effdfa;
 }
 .listul2{
     list-style: none;
     width: 300px;
-    border:1px solid;
+    border:1px solid #b4e4d8;
     padding: 0;
     margin: 0;
     border-top: 0;
     display: none;
+    background-color: #effdfa;
 }
 .listli{
     height: 50px;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid;
+    border-bottom: 1px solid #b4e4d8;
+    padding: 0 40px;
 }
 .up,.down{
     display: flex;
