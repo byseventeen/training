@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-3.3.1.min.js" ></script>
+		<script type="text/javascript" src="js/jquery-migrate-1.4.1.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				//alert("页面加载完成...");
+				// dom对象
+				var userNameNode = document.getElementById("userName");
+				//alert(userNameNode.value);
+				
+				// jQuery对象
+				var userNameObj = $(userNameNode);
+				//alert(userNameObj.val());
+				
+				// 把jQuery对象转换成dom对象
+				//var inputNode = userNameObj.get(0);
+				var inputNode = userNameObj.get()[0];
+				alert(inputNode.value);
+			});
+		</script>
+	</head>
+	<body>
+		<input type="text" id="userName" value="mickey"/>
+	</body>
+</html>

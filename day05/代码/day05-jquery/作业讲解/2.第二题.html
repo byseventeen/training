@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function addItem() {
+				// 获取用户输入
+				var foodName = document.getElementById("foodName").value;
+				// 创建li标签
+				var liNode = document.createElement("li");
+				// 设置li标签的文本
+				liNode.textContent = foodName;
+				// 获取ul标签
+				var ulNode = document.getElementsByTagName("ul")[0];
+				// 把li添加到ul中
+				ulNode.appendChild(liNode);
+				// 清空输入的内容
+				document.getElementById("foodName").value = "";
+			}
+		</script>
+	</head>
+	<body>
+		<ul>
+			<li>宫保鸡丁</li>
+			<li>辣子鸡</li>
+			<li>水煮牛肉</li>
+		</ul>
+		<input id="foodName"/>
+		<input type="button" value="动态生成列表项" onclick="addItem()"/>
+	</body>
+</html>

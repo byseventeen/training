@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-3.3.1.min.js" ></script>
+		<script type="text/javascript" src="js/jquery-migrate-1.4.1.min.js" ></script>
+		<script>
+			function setImage() {
+				$("img").prop("src", "img/good.jpg");
+				
+				// prop获取或设置元素本身固有的属性
+				var propValue = $("img1").prop("place");
+				// attr获取或设置元素的任何属性
+				//var propValue = $("img").attr("src"); 
+				alert($("img").prop("alt"));
+			}
+			
+			function delImage() {
+				// 删除img元素的src属性
+				$("img").removeAttr("src");
+			}
+		</script>
+	</head>
+	<body>
+		<img id="img1" src="img/good.jpg" alt="猎德大桥"/>
+		<button onclick="setImage()">设置图片</button>
+		<button onclick="delImage()">删除图片</button>
+	</body>
+</html>

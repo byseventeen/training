@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-3.3.1.min.js" ></script>
+		<script type="text/javascript" src="js/jquery-migrate-1.4.1.min.js" ></script>
+		<script>
+			$(document).ready(function() {
+				// 通过ID属性获取userName的jQuery对象
+				//var nameObj = $("#userName");
+				//alert(nameObj);
+				
+				// 标签选择器
+				var inputObjs = $("input");
+//				for (var i = 0; i < inputObjs.length; i++) {
+				for (var i = 0; i < inputObjs.size(); i++) {
+					//alert(inputObjs[i].value);
+				}
+				
+				/*$("input").each(function(i){
+					alert(i);
+					// this是dom对象
+					alert(this.value);
+				});*/
+				
+				// 组合选择器
+				//alert($("input, button").size());
+				/*$("input, button").each(function(i) {
+					alert(this.nodeName);
+				});*/
+				
+				// 关系选择器
+				$("#course div").each(function(i) {
+//				$("#course>div").each(function(i) {
+					alert(this.textContent);
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<input type="text" id="userName" value="mickey"/><br/>
+		<input type="text" id="userPass" value="123"/><br/>
+		<button value="测试"></button>
+		
+		<div id="course">
+			<div>
+				java
+				<div>
+					java基础	
+				</div>
+				<div>
+					Java框架	
+				</div>
+				<div>
+					Java分布式项目	
+				</div>
+			</div>
+			<div>php</div>
+			<div>android</div>
+			<p></p>
+		</div>
+		<div id="hobby">
+			<div>football</div>
+			<div>basketball</div>
+			<div>pingpong</div>
+		</div>
+	</body>
+</html>
