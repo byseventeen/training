@@ -3,16 +3,17 @@
   <display-name>day06-servlet</display-name>
   	<!-- 配置Servlet -->
 	<servlet>
-		<!-- Servlet的名字，可以是任意 -->
+		<!-- 1.Servlet的名字，可以是任意 -->
 		<servlet-name>HelloServlet</servlet-name>
-		<!-- Servlet的完整类名(包名+类名) -->
+		<!-- 2.Servlet的完整类名(包名+类名) -->
 		<servlet-class>com.etc.servlet.HelloServlet</servlet-class>
 	</servlet>
 	
 	<servlet-mapping>
-		<!-- 必须要与上面的servlet-name相同 -->
+		<!-- 1.必须要与上面的servlet-name相同 -->
 		<servlet-name>HelloServlet</servlet-name>
-		<!-- 访问资源路径 -->
+		<!-- 2.访问资源路径 -->
 		<url-pattern>/hello</url-pattern>
 	</servlet-mapping>
 </web-app>
+

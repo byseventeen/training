@@ -45,3 +45,7 @@ aa的username与paw都被bb篡改了所以aa会登录失败
 
 
 静态资源的访问方法是通过路径访问，如果该路径改为/和/*，后面是无法访问静态资源的
+
+
+
+http://localhost:8080/display-name/url-pattern
