@@ -82,3 +82,44 @@ setAttribute(objecy,value)
 
 ![1563934883507](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\1563934883507.png)
 
+
+
+## 会话技术
+
+### cookie
+
+保存在浏览器中的一个小文件，当浏览器发出请求的时候，也会把小文件内容一并发送到服务器。
+
+#### 添加数据
+
+创建cookie对象
+
+设置cookie有效时间setMaxAge（int second） 默认为浏览器关闭时间
+
+设置cookie有效路径（可选）
+
+限制cookie在什么路径下面使用
+
+输出cookie到客户端
+
+response.addCookie(cookie);
+
+#### 获取cookie数据
+
+调用request.getCookie() 返回客户端返回的所有cookie  数组来的
+
+遍历cookie数组
+
+调用cookie方法获取cookie数据
+
+#### 修改数据
+
+#### 删除数据
+
+设置一个同名的，把有效时间设为0。如果创建的时候有有效路径 删除的时候也要有。
+
+
+
+### session
+
+session是服务端的会话技术
