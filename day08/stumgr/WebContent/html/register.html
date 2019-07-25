@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>	
+	<form action="/stumgr/register" method="get">
+		<table border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td align="left">姓名</td>
+				<td>
+					<input type="text" name="userName">
+				</td>
+			</tr>
+			
+			<tr>
+				<td align="left">性别</td>
+				<td>
+					<input type="radio" name="gender" value="男">男
+					<input type="radio" name="gender" value="女">女
+				</td>
+			</tr>
+			
+			<tr>
+				<td align="left">年龄</td>
+				<td>
+					<select name="age">
+						<option>18</option>
+						<option>19</option>
+						<option>20</option>
+						<option>21</option>
+						<option>22</option>
+						<option>23</option>
+					</select>
+				</td>
+			</tr>
+			
+			<tr>
+				<td align="left">生日(yyyy-MM-dd)</td>
+				<td>
+					<input type="text" name="birthday">
+				</td>
+			</tr>
+			
+			<tr>
+				<td align="left">电话</td>
+				<td>
+					<input type="text" name="telphone">
+				</td>
+			</tr>
+			
+			<tr>
+				<td align="left">爱好</td>
+				<td>
+					<input type="checkbox" name="hobby" value="运动">运动
+					<input type="checkbox" name="hobby" value="游戏">游戏
+					<input type="checkbox" name="hobby" value="阅读">阅读
+				
+				</td>
+			</tr>
+			
+			<tr>
+				<td align="center" colspan="2">
+					<input type="submit" value="提交">
+				</td>
+				
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
