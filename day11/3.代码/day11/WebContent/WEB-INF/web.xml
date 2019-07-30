@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  
+  <!-- 配置过滤器 -->
+  <filter>
+  	<!-- 过滤器的名字 -->
+  	<filter-name>MyFilter</filter-name>
+  	<!-- 过滤器的完整类名 -->
+  	<filter-class>com.chinasofti.day11.filter.MyFilter</filter-class>
+  	<!-- 配置参数 -->
+  	<init-param>
+  		<param-name>name</param-name>
+  		<param-value>jacky</param-value>
+  	</init-param>
+  </filter>
+  
+  <filter>
+  	<!-- 过滤器的名字 -->
+  	<filter-name>CharacterEncoding</filter-name>
+  	<!-- 过滤器的完整类名 -->
+  	<filter-class>com.chinasofti.day11.filter.CharacterEncodingFilter</filter-class>
+  	<!-- 配置参数 -->
+  	<init-param>
+  		<param-name>charset</param-name>
+  		<param-value>utf-8</param-value>
+  	</init-param>
+  </filter>
+  
+  <!-- <filter-mapping>
+  	<filter-name>MyFilter</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  <filter-mapping>
+  	<filter-name>CharacterEncoding</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping> -->
+  
+  <filter>
+  	<filter-name>FilterA</filter-name>
+  	<filter-class>com.chinasofti.day11.filter.FilterA</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>FilterA</filter-name>
+  	<url-pattern>/hello</url-pattern>
+  </filter-mapping>
+  
+  <filter>
+  	<filter-name>FilterB</filter-name>
+  	<filter-class>com.chinasofti.day11.filter.FilterB</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>FilterB</filter-name>
+  	<url-pattern>/hello</url-pattern>
+  </filter-mapping>
+  
+  
+  <servlet>
+  	<!-- 过滤器的名字 -->
+  	<servlet-name>HelloServlet</servlet-name>
+  	<!-- 过滤器的完整类名 -->
+  	<servlet-class>com.chinasofti.day11.servlet.HelloServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>HelloServlet</servlet-name>
+  	<!-- 过滤器的路径 -->
+  	<url-pattern>/hello</url-pattern>
+  </servlet-mapping>
+  
+</web-app>

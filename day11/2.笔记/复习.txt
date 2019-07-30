@@ -1,0 +1,117 @@
+JSP:
+	servlet和HTML的结合体。
+	
+JSP的组成：
+	1）HTML标签 
+	2）JSP指令 ： 
+		Page指令：提示当前页面的参数信息
+		include：包含其他JSP页面
+		taglib：引入标签库
+	3）注释 
+		HTML注释和JSP注释区别？
+			<!--  -->可以在网页查看源码看到。
+			<%--  -->不可以
+	4）代码区 
+		<%
+			java代码...
+		%>
+		
+		一个页面
+	5）脚本表达式: 替换out.write()
+		<%=输出内容%>
+	
+	
+	JSP其实就是一个Servlet，为什么？
+	
+	文件名_jsp.java
+	第一次访问JSP的时候，jvm会把jsp编译成一个Java文件。其中该jsp文件就是一个servlet。我们在网页上看到的内容实际上就是该Servlet的service方法的out.write方法的输出。
+	
+JSP的内置对象：
+	page
+	pageContext:1) 获取其他对象；2）作为域对象
+	request	
+	session
+	application：SevletContext
+	response：1）重定向；2）向页面输出内容
+	exception：包含了一个jsp页面的异常信息
+	config：获取配置参数
+	out：有缓存的PrintWriter对象
+	
+EL: 
+	作用：替代脚本表达式。
+	
+	class Person {
+		String name;
+		int age;
+		List<Pet> pets;
+		
+		
+		
+		public String getName() {
+		
+		}
+		
+		public List<Pet> getPets() {
+		
+		}
+	}
+	
+	class Pet {
+		String name;
+		String color;
+		
+		public String getName() {
+		
+		}
+		
+		public String getColor() {
+		
+		}
+	}
+	
+	Person person = new Person();
+	
+	
+	
+	pageContext.setAttribute("person", person);
+	
+	
+	
+	写法:${域对象.属性}
+	
+	${pageScope.person.name}
+	${pageScope.person.pets[0].name}
+	
+	
+	对象成员属性private
+	
+	属性其实是对应着对象中的getXxx方法，把get去掉，把首字母小写。
+	
+	el域对象：
+		pageContext -> pageScope
+		request -> requestScope
+		session -> sessionScope
+		application -> applicationScope
+	
+	el表达式的域对象可以不写。默认就是pageScope -> requestScope -> sessionScope -> applicationScope一级一级查找，指导找到为止。
+	
+	JSP的最佳实践：
+		JSP负责页面内容的展示，Servlet负责业务处理。
+	
+
+JSTL标签库：
+	作用：简化JSP代码。
+
+	使用步骤：
+		第一步：导入jstl的jar包
+		第二步：在页面引入标签库文件；
+		第三步：使用标签；
+			
+	
+	
+	
+	
+	
+	
+	
+	

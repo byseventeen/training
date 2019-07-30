@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<taglib xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd"
+    version="2.1">
+    
+  <description>JSTL 1.1 core library</description>
+  <display-name>JSTL core</display-name>
+  <tlib-version>1.1</tlib-version>
+  <!-- 前缀名 -->
+  <short-name>etc</short-name>
+  <!-- 该标签库的uri -->
+  <uri>/mytags</uri>
+
+	
+  <tag>
+  	<!-- 标签名 -->
+    <name>currentTime</name>
+    <!-- 标签处理类 -->
+    <tag-class>com.chinasofti.day11.tags.CurrentTimeTag</tag-class>
+    <body-content>scriptless</body-content>
+  </tag>
+  
+  <tag>
+    <name>showBody</name>
+    <tag-class>com.chinasofti.day11.tags.ShowBodyTag</tag-class>
+    <body-content>scriptless</body-content>
+  </tag>
+  
+  <tag>
+    <name>loop</name>
+    <tag-class>com.chinasofti.day11.tags.LoopTag</tag-class>
+    <body-content>scriptless</body-content>
+    <!-- 定义属性 -->
+    <attribute>
+    	<!-- 属性名 -->
+    	<name>count</name>
+    	<!-- 是否是必须的 -->
+    	<required>true</required>
+    	<!-- 是否支持表达式 -->
+    	<rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+  
+  <tag>
+    <name>if</name>
+    <tag-class>com.chinasofti.day11.tags.IfTag</tag-class>
+    <body-content>scriptless</body-content>
+    <!-- 定义属性 -->
+    <attribute>
+    	<!-- 属性名 -->
+    	<name>test</name>
+    	<!-- 是否是必须的 -->
+    	<required>true</required>
+    	<!-- 是否支持表达式 -->
+    	<rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+  
+  <tag>
+    <name>forEach</name>
+    <tag-class>com.chinasofti.day11.tags.ForEachTag</tag-class>
+    <body-content>scriptless</body-content>
+    <!-- 定义属性 -->
+    <attribute>
+    	<!-- 属性名 -->
+    	<name>items</name>
+    	<!-- 是否是必须的 -->
+    	<required>true</required>
+    	<!-- 是否支持表达式 -->
+    	<rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+    	<!-- 属性名 -->
+    	<name>var</name>
+    	<!-- 是否是必须的 -->
+    	<required>true</required>
+    	<!-- 是否支持表达式 -->
+    	<rtexprvalue>false</rtexprvalue>
+    </attribute>
+  </tag>
+
+</taglib>
