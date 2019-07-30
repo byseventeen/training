@@ -1,0 +1,71 @@
+1. 文件上传
+  文件上传表单与普通表单区别？
+  1) 文件上传表单一定要用Post方法，普通表单可以是post也可以get
+  2）文件上传表单需要指定enctype=multipart/form-data属性；
+  3）普通表单不需要指定enctype属性；
+  4）提交文件表单的时候，每一个表单项都有自己独立的头信息。而普通表单的头信息都是相同的；
+  5）文件上传表单不能够通过request.getParameter方法获取表单数据，只能够通过getInputSTream方法获取表单数据；
+
+2.fileupload工具
+commons组件之一 
+  
+   第一步：导jar包；
+   第二步：创建DiskFileItemFactory对象；
+   第三步：创建ServletFileUpload对象，提供了parseRequest方法解析请求；
+   第四步：调用parseRequest方法该方法返回一个List<FileItem>
+   第五步：遍历集合，获取每一个表单项FileIitem；
+   
+   FileItem的方法：
+      isFormField: 如果返回true，代表普通表单项，否则就是文件表单项；
+      getName: 获取上传文件名
+      getString：获取普通表单项的内容，并指定编码格式；
+      getInputStream：获取上传文件的输入流对象；
+      getContentType：获取上传文件的类型；
+      getSize()：获取上传文件的大小，以字节为单位；
+	
+
+2. Fitler过滤器
+   作用：执行Servlet之前加入一些额外处理。例如登录认证、全局的中文处理、七天免登陆、数据库事务。
+
+// 事务中
+开启事务
+
+servlet
+insert into
+insert into
+insert into
+insert into
+
+提交事务
+
+DbUtil
+
+
+在一个事务的所有操作都应该使用同一个Connection对象。
+
+
+使用Filter：
+第一步：创建过滤器类，实现Filter接口，重写所有方法。
+第二步：在web.xml文件中配置Filter
+
+过滤器链：可以对同一个资源配置多个过滤器。
+
+过滤器链的执行顺序：先定义的过滤器先执行。
+
+FilterA              FilterB      FilterC     HelloServlet
+1.FilterA放行前代码
+2.FilterA放行代码
+3.FilterB放行前代码
+4.FilterB的放行代码
+5.目标SERvlet
+6.FilterB放行后代码
+7.FilterA放行后代码
+
+
+
+
+
+
+
+
+

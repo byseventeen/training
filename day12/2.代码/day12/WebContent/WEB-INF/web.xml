@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<!-- <filter>
+		<filter-name>LoginFilter</filter-name>
+		<filter-class>com.chinasofti.demo01七天免登陆升级版.LoginFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>LoginFilter</filter-name>
+		<url-pattern>/index.html</url-pattern>
+	</filter-mapping> -->
+
+
+	<!-- 配置监听器
+	<listener>
+		<listener-class>com.chinasofti.day12.listener.MyServletContextListener</listener-class>
+	</listener>
+	
+
+	<listener>
+		<listener-class>com.chinasofti.day12.listener.MyServletContextAttributeListener</listener-class>
+	</listener> -->
+	
+	<!-- <servlet>
+		<servlet-name>LoadOnStartUp2Servlet</servlet-name>
+		<servlet-class>com.chiansofti.day12.servlet.LoadOnStartUp2Servlet</servlet-class>
+		执行该Servlet的加载顺序，它的值越小，那就先加载
+		<load-on-startup>10</load-on-startup>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>LoadOnStartUpServlet</servlet-name>
+		<servlet-class>com.chiansofti.day12.servlet.LoadOnStartUpServlet</servlet-class>
+		执行该Servlet的加载顺序，它的值越小，那就先加载
+		<load-on-startup>11</load-on-startup>
+	</servlet> -->
+	
+	<session-config>
+		<!-- 设置session的过期时间，以分钟为单位 -->
+		<session-timeout>60</session-timeout>
+	</session-config>
+</web-app>
