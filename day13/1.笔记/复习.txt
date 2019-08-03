@@ -1,0 +1,64 @@
+一、监听器
+ 作用：监听一些对象或者对象属性状态的变化。
+ 
+ HttpSessionListener：监听Session对象状态。
+	1）超过session过期时间；2）服务器关闭或重启；
+	
+ HttpSessionAttributeListener：添加属性、修改属性、删除属性
+ 
+ ServletContextListener：监听SErvletcontext对象状态，创建ServletContext,删除ServletContext
+ ServletContextAttributeListener：添加属性、修改属性、删除属性
+ 
+ ServletRequestListener：监听request对象状态。
+ ServletRequestAttributeListener：：添加属性、修改属性、删除属性
+ 
+
+
+二、Servlet零配置
+	@WebServlet
+		value: 相当于url-pattern
+		url-patterns：同上
+		loadOnStartup：Servlet的加载顺序，如果指定了该属性，那么容器启动的时候就会加载该对象。
+		initParams：servlet配置参数
+	@WebFilter
+	@WebListener
+	
+	Servlet注解必须要3.0以上版本才支持
+
+
+
+三、数据库设计
+	第一步：了解功能需求，根据功能需求定义实体，分析他们的属性；
+	第二步：绘制E-R图
+	第三步：根据E-R图创建模型；
+	第四步：根据模型创建数据库；
+		定义sql
+		
+	DCL:数据控制语言
+	DDL:数据定义语言。创建数据库，创建表，修改表sql命令
+	DML:数据管理语言。添加数据、修改数据等等
+	DQL：数据查询语言。
+	
+	create table 表名 (
+		字段定义...
+	)
+	
+	alter table 表名 
+		
+	drop table 表名
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
