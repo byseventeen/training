@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <servlet>
+    <servlet-name>Index_JSP</servlet-name>
+    <jsp-file>/WEB-INF/jsp/index.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Index_JSP</servlet-name>
+    <url-pattern>/index.html</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Head_JSP</servlet-name>
+    <jsp-file>/WEB-INF/jsp/head.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Head_JSP</servlet-name>
+    <url-pattern>/head.html</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Menu_JSP</servlet-name>
+    <jsp-file>/WEB-INF/jsp/menu.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Menu_JSP</servlet-name>
+    <url-pattern>/menu.html</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Login_JSP</servlet-name>
+    <jsp-file>/WEB-INF/jsp/login.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Login_JSP</servlet-name>
+    <url-pattern>/login.html</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>USER_ADD_JSP</servlet-name>
+    <jsp-file>/WEB-INF/jsp/user/add.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>USER_ADD_JSP</servlet-name>
+    <url-pattern>/admin/user/add.html</url-pattern>
+  </servlet-mapping>
+  
+  
+  <!-- 全局处理异常 -->
+  <error-page>
+  	<error-code>500</error-code>
+  	<location>/500.html</location>
+  </error-page>
+  
+</web-app>
